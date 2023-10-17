@@ -1,0 +1,17 @@
+<h1><%=params.fetch("dice")%>d<%=params.fetch("sides")%></h1>
+
+<a href="/process_roll?dice=<%=params.fetch("dice")%>&sides=<%=params.fetch("sides")%>">Roll again</a>
+
+|
+
+<a href="/">Go back home</a>
+
+<ol>
+  <% @rolls.each do |a_roll| %>
+    <li>
+    <strong>
+      <%= a_roll %>
+      </strong>
+    </li>
+  <% end %>
+</ol>
